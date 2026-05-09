@@ -9,7 +9,7 @@ class Program
         DisplayWelcome();
         string username = ProptUserName();
         int favoritenum = PromptUserNumber();
-        double square = SquareNumber(favoritenum);
+        int square = SquareNumber(favoritenum);
         DisplayResult(username, square);
     }
     static void DisplayWelcome()
@@ -19,23 +19,23 @@ class Program
 
     static string ProptUserName()
     {
-        Console.Write("Enter Your name: ");
+        Console.Write("Please enter Your name: ");
         string response = Console.ReadLine();
         return response;
     }
     static int PromptUserNumber()
     {
-        Console.Write("Enter Your favorite number: ");
+        Console.Write("Please enter Your favorite number: ");
         string response = Console.ReadLine();
         int responseinted = int.Parse(response);
         return responseinted;
     }
-    static double SquareNumber(int num)
+    static int SquareNumber(int num)
     {
-        double number = Math.Sqrt(num);
+        int number = num*num;
         return number;
     }
-    static void DisplayResult(string name, double sqnum)
+    static void DisplayResult(string name, int sqnum)
     {
         Console.WriteLine($"{name}, the square number of your number is {sqnum}");
     }
